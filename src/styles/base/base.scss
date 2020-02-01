@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; //1rem = 10px, 10/16 = 62.5%
+  box-sizing: inherit;
+
+  @include respond(tab-land) {
+    //width < 1200?
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //width < 900?
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  // @include respond(phone){//width < 600?
+  //     font-size: 37.5%;//1rem = 6px, 6/16 = 37.5%
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
+}
+body {
+  font-family: 'Marck Script', cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color-gray-dark-1;
+  padding: 3rem;
+  overflow-x: hidden;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+.wrapper {
+  display: none;
+}
+
+/*---------- 'Text styling' ----------*/
+::selection {
+  background: $color-primary;
+  color: $color-white;
+}

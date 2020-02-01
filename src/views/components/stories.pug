@@ -1,0 +1,27 @@
+section#stories.section__stories
+  .bg-video
+    video.bg-video__content(autoplay muted loop)
+      source(src="/img/video.mp4" type="video/mp4")
+      source(src="/img/video.webm" type="video/webm")
+      |Your browser is not supported!
+  .u-center-text.u-margin-bottom-big
+    h2.heading-secondary О нас говорят
+  .row
+    .story
+      figure.story__shape
+        img.story__img(srcset="/img/user-1.png 300w, /img/user-1.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" src="/img/user-1.png", alt="Person on the tour")
+
+        figcaption.story__caption Константин Дергачёв
+      .story__text
+        h3.heading-tertiary.u-margin-bottom-small Способ познания объектной реальности.
+        p Возможность посетить арт выставку - это всегда здорово. Всегда интересно смотреть разные работы, пытаться понять, что автор хочет сказать. Есть работы местных авторов, о которых мало что известно, но от которых невозможно отойти долгое время.
+  .row
+    .story
+      figure.story__shape
+        img.story__img(srcset="/img/user-2.png 300w, /img/user-2.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" src="/img/user-2.png", alt="Person on the tour")
+        figcaption.story__caption Валерия Рябец
+      .story__text
+        h3.heading-tertiary.u-margin-bottom-small Хорошие художники копируют, великие художники воруют (П. Пикассо).
+        p Дело художника - рождать радость. Я думаю, что когда художник начинает думать о деньгах, он начинает терять чувство прекрасного. Поэтому, смотреть работы молодых "голодных" художников всегда интересно.
+  .u-center-text.u-margin-top-huge
+    a.btn-text(href="#another__stories") Прочесть другие истории &rarr;

@@ -1,0 +1,44 @@
+.load {
+  background: $color-white;
+  // min-width: 1920px;
+  width: 100%;
+  min-height: 1920px;
+  height: 100%;
+
+  @include respond(phone) {
+    min-width: 360px;
+  }
+}
+
+.preload {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  hr {
+    position: absolute;
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    animation: spin 2s infinite ease;
+  }
+  :first-child {
+    background: $color-primary;
+    animation-delay: -1.5s;
+  }
+  :nth-child(2) {
+    background: $color-secondary-light;
+    animation-delay: -1s;
+  }
+  :nth-child(3) {
+    background: $color-tertiary-dark;
+    animation-delay: -0.5s;
+  }
+  :last-child {
+    background: $color-red;
+  }
+}

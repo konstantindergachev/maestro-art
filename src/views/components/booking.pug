@@ -1,0 +1,27 @@
+section.section__booking
+  .row
+    #book.book
+      .book__form
+        form.form(action="smart-maile.php" method="POST")
+          .u-margin-bottom-midium
+            h2.heading-secondary Закажи картину
+            input#name.form__input(type="hidden" name="mainForm" value="mainForm")
+          .form__group
+            input#fullname.form__input(type="text" name="fullname" placeholder="Ф.И.О." required)
+            label.form__label(for="fullname") Ф.И.О.
+          .form__group
+            input#email.form__input(type="email" name="email" placeholder="Email" required)
+            label.form__label(for="email") Email
+          .form__group.u-margin-bottom-midium
+            .form__radio-group
+              input#small.form__radio-input(type="radio" name="size")
+              label.form__radio-label(for="small")
+                span.form__radio-button
+                |Маленькая
+            .form__radio-group
+              input#large.form__radio-input(type="radio" name="size")
+              label.form__radio-label(for="large")
+                span.form__radio-button
+                |Большая
+          .form__group
+            button.btn.btn-green Следующий шаг &rarr;
